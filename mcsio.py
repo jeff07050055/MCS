@@ -46,10 +46,11 @@ while True:
 		print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(t0, h0))
 		payload = {"datapoints":[{"dataChnId":"Humidity","values":{"value":h0}},
 			{"dataChnId":"Temperature","values":{"value":t0}},
-			{"dataChnId":"SwitchStatus","values":{"value":SwitchStatus}}]}  
+			{"dataChnId":"SwitchStatus","values":{"value":switch}}]}  
 		post_to_mcs(payload)
 
 	else:
 		print('Failed to get reading. Try again!')
 		sys.exit(1)
+
 
